@@ -6,15 +6,6 @@
 
 
 <link rel="stylesheet" type="text/css" href="public/Css/form.css">
-<h2>Formulario para Proponentes</h2>
-<br>
-<p><font size="3">Por favor diligenciar el siguiente formato y anexarlo a la propuesta. Le agradecemos tener en cuenta la siguiente información: </font></p>
-<ul class="ul_inicio">
-    <font size="3">
-        <li>El Festival se ralizará en el <strong>Complejo Metropolitano Simón Bolívar</strong> el cual consta de los siguientes escenarios: Parque Simón Bolívar, Parque Recreodeportivo El Salitre(PRD), Unidad Deportiva El Salitre(UDS), Parque el Lago / Novios, Complejo Acuático y Palacio de los Deportes. </li>
-        <li>El contenido de la propuesta se puede presentar en formato Word, PDF o Power Point.</li>
-    </font>
-</ul>
 <br>
 <form method="POST" action="insertar" id="form_gen" enctype="multipart/form-data">
     
@@ -22,225 +13,88 @@
     <div class="panel panel-default">
     <!--<div class="panel-heading">Información Personal</div>-->
     <div class="panel-body">
+    <br>
     <div class="row">
-        <div class="col-md-6">
-            <label for="formGroupExampleInput">Tipo de Organización que presenta la propuesta</label>
+        <div class="col-md-6" align="center">
+            <label for="formGroupExampleInput">¿Tiene familiares con algún tipo de  discapacidad?</label>
         </div>
-        <div class="col-md-6">
-            <label  for="formGroupExampleInput2">Cual?
+          <div class="col-xs-6 col-sm-5">
+            <select name="tipo_organizacion" id="tipo_organizacion" class="form-control" data-readonly="otra_organizacion" data-readonly-value="1">
+                <option value="">Seleccione</option>
+                <option value="1">Si</option>
+                <option value="2">No</option>
+            </select>
+        <br></div>
+
+        <div class="col-md-6" align="center">
+            <label  for="formGroupExampleInput2">¿Qué tipo de discapacidad?
             
             </label>
             <label class="freebirdFormviewerViewItemsPagebreakDescriptionText" style="font-size:11px"></label>
-        </div>
-        <div class="col-md-6">
-            <select name="tipo_organizacion" id="tipo_organizacion" class="form-control" data-readonly="otra_organizacion" data-readonly-value="6">
-                <option value="1">Club</option>
-                <option value="2">Fundación</option>
-                <option value="3">Liga</option>
-                <option value="4">Entidad sin ánimo de lucro</option>
-                <option value="5">Persona natural</option>
-                <option value="6">Otro</option>
-            </select>
-        </div>
-        <div class="col-md-6"><input required type="text" class="form-control" id="otra_organizacion" name="otra_organizacion" readonly="readonly"></div>
-        <div class="col-md-12">
-            <br>
-        </div>
-        <div class="col-md-6">
-            <label for="formGroupExampleInput">Nombre del organizador</label>
-        </div>
-        <div class="col-md-6">
-            <label  for="formGroupExampleInput2">Nombre de la propuesta  
-            
-            </label>
-            <label class="freebirdFormviewerViewItemsPagebreakDescriptionText" style="font-size:11px"></label>
-        </div>
-        <div class="col-md-6"><input required type="text" class="form-control" id="nombre_organizacion" name="nombre_organizacion" ></div>
-       <div class="col-md-6"><input required type="text" class="form-control" id="nombre_propuesta" name="nombre_propuesta" ></div>
-        
-        <div class="col-md-12">
-            <br>
-        </div>
-        <div class="col-md-6"><label  for="formGroupExampleInput2">
-            Describir brevemente en que consiste la propuesta 
-            </label>
-        </div>
-        <div class="col-md-6"><label  for="formGroupExampleInput2">
-            Especificar a que público se encuantra dirigido el evento 
-            </label>
-        </div>
-        <div class="col-md-6"><textarea cols=82 rows=5 name="propuesta" id="propuesta"></textarea> </div>
-        <div class="col-md-6">
-            <select name="publico_dirigido" id="publico_dirigido" class="form-control" >
-                <option value="1">Niños y Niñas</option>
-                <option value="2">Personas Mayores</option>
-                <option value="3">Pensionados y Madres comunitarias</option>
-                <option value="4">Comunidades organizadas</option>
-                <option value="5">Adultos</option>
-            </select>
-        </div>
-        <div class="col-md-12">
-            <br>
-        </div>
-        <div class="col-md-6"><label  for="formGroupExampleInput2" >
-            Antecedentes del evento: Explicar brevemente si el evento ya se ha realizado anteriormente y cuál ha sido la trayectoria del mismo (Asistencia, lugar y fecha como datos mínimos)
-            </label>
-        </div>
-        <div class="col-md-6"> <label  for="formGroupExampleInput2">Fechas propuestas para realización del evento en el Festival  de Verano entre el 5 y el 13 de agosto (opcional)</label>
-        </div>
-        <div class="row">
-        	<div class="col-md-12">
-		        <div class="col-md-6"><textarea cols=82 rows=5 name="antecedentes" id="antecedentes"></textarea></div>
-		        <div class="col-md-6"><input required type="text" class="form-control" id="fecha_propuesta" name="fecha_propuesta" ></div>
-	       	</div>
-        </div>
-        <div class="col-md-12">
-            <br>
-        </div>
-        <div class="col-md-6"><label  for="formGroupExampleInput">Definir el tipo de evento</label>
-        </div>
-        <div class="col-md-6">
-            <label  for="formGroupExampleInput2">Cual?
-            </label>
-            <label class="freebirdFormviewerViewItemsPagebreakDescriptionText" style="font-size:11px"></label>
-        </div>
-        <div class="col-md-6">
-            <select name="tipo_evento" id="tipo_evento" class="form-control" data-readonly="evento" data-readonly-value="3" >
-                <option value="1">Deportivo</option>
-                <option value="2">Recreativo</option>
-                <option value="3">Otro</option>
-            </select>
-        </div>
-        <div class="col-md-6"><input required type="text" class="form-control" id="evento" name="evento" readonly="readonly"></div>
-        <div class="col-md-12">
-            <br>
-        </div>
-        <div class="col-md-12">
-            <br>
-        </div>
-        <div class="col-md-4"><label  for="formGroupExampleInput">Tiempo de montaje del evento</label>
-        </div>
-        <div class="col-md-4"><label  for="formGroupExampleInput">Duración del evento</label>
-        </div>
-        <div class="col-md-4">
-            <label  for="formGroupExampleInput2">Tiempo de desmontaje del evento
-            </label>
-            <label class="freebirdFormviewerViewItemsPagebreakDescriptionText" style="font-size:11px"></label>
-        </div>
-        <div class="col-md-4">
-            <select name="tiempo_montaje" id="tiempo_montaje" class="form-control" >
-                <option value="1 - 2 días">1 - 2 días</option>
-                <option value="2 - 4 días">2 - 4 días</option>
-                <option value="4 o más días">4 o más días</option>
-            </select>
-        </div>
-        <div class="col-md-4">
-            <select name="duracion" id="duracion" class="form-control" >
-                <option value="1 - 2 días">1 - 2 días</option>
-                <option value="2 - 4 días">2 - 4 días</option>
-                <option value="4 o más días">4 o más días</option>
-            </select>
-        </div>
-        <div class="col-md-4">
-            <select name="tiempo_desmontaje" id="tiempo_desmontaje" class="form-control" >
-                <option value="1 - 2 días">1 - 2 días</option>
-                <option value="2 - 4 días">2 - 4 días</option>
-                <option value="4 o más días">4 o más días</option>
-            </select>
-        </div>
-        <div class="col-md-12">
-            <br>
-        </div>
-        <div class="col-md-6"><label  for="formGroupExampleInput">Lugar(es) propuesto (s) para realizar el evento en el Complejo Metropolitano Simón Bolívar</label>
-        </div>
-        <div class="col-md-6">
-            <label  for="formGroupExampleInput2">
-            </label>
-            <label class="freebirdFormviewerViewItemsPagebreakDescriptionText" style="font-size:11px"></label>
-        </div>
-        <div class="col-md-6">
-            <select name="lugar_propuesto" id="lugar_propuesto" class="form-control" >
-                <option value="1">Parque Central Simón Bolívar </option>
-                <option value="2">PRD</option>
-                <option value="3">UDS</option>
-                <option value="4">Parque El Lago / Novios</option>
-                <option value="5">Complejo Acuático</option>
-                <option value="6">Palacio de los Deportes</option>
-            </select>
-        </div>
-        <div class="col-md-6"></div>
-        <div class="col-md-12">
-            <br>
-        </div>
-        <div class="col-md-12">
-          Impacto esperado del evento: ¿A cuántas personas espera impactar con su evento entre participantes y espectadores?
-          <strong>Participantes: </strong>Aquellos que hacen parte de la actividad como por ejemplo deportistas.
-          <strong>Espectadores: </strong> Público que asiste para ver el evento <br>
-        </div>
-        <div class="col-md-12">
-            <br>
-        </div>
-        <div class="col-md-4"><label  for="formGroupExampleInput">Número de participantes</label>
-        </div>
-        <div class="col-md-4"><label  for="formGroupExampleInput">Número de espectadores</label>
-        </div>
-        <div class="col-md-4">
-            <label  for="formGroupExampleInput2">Total
-            </label>
-            <label class="freebirdFormviewerViewItemsPagebreakDescriptionText" style="font-size:11px"></label>
-        </div>
-        <div class="col-md-4">
-            <input required type="text" class="form-control" id="numero_participantes" name="numero_participantes" >
-        </div>
-        <div class="col-md-4">
-            <input required type="text" class="form-control" id="numero_espectadores" name="numero_espectadores" >
-        </div>
-        <div class="col-md-4">
-           <input required type="text" class="form-control" id="total" name="total" >
         </div>
 
-        <div class="col-md-12">
-            <br>
+         <div class="col-xs-6 col-sm-5"><input required type="text" class="form-control" id="otra_organizacion" name="otra_organizacion" readonly="readonly"> <br></div>
+      
+
+      <!-- 2 parte-->
+        <div class="col-md-6" align="center">
+            <label for="formGroupExampleInput">¿Su familiar hace parte de algún grupo social, deportivo o de formación académica?</label>
         </div>
-        <div class="col-md-6"><label  for="formGroupExampleInput">Especificar si tiene patrocinadores o aliados para el desarrollo de la actividad y quienes son:
-        </label>
-        </div>
-        <div class="col-md-6">
-            <label  for="formGroupExampleInput2">Cuales?
+          <div class="col-xs-6 col-sm-5">
+            <select name="tipo_organizacion" id="tipo_organizacion" class="form-control" data-readonly="otra_organizacion" data-readonly-value="1">
+                <option value="">Seleccione</option>
+                <option value="1">Si</option>
+                <option value="2">No</option>
+            </select>
+        <br></div>
+
+        <div class="col-md-6" align="center">
+            <label  for="formGroupExampleInput2">Por favor indique a que grupo pertenece 
+            
             </label>
             <label class="freebirdFormviewerViewItemsPagebreakDescriptionText" style="font-size:11px"></label>
         </div>
         
-        <div class="col-md-6"><input required type="text" class="form-control" id="nombre_patrocinador" name="nombre_patrocinador"></div>
-        <div class="col-md-6">
-            <select name="patrocinador" id="patrocinador" class="form-control" data-readonly="nombre_patrocinador" data-readonly-value="1" >
+         <div class="col-xs-6 col-sm-5"><input required type="text" class="form-control" id="otra_organizacion" name="otra_organizacion" readonly="readonly"><br></div>
+
+<!-- 3 parte-->
+
+ <div class="col-md-6" align="center">
+            <label for="formGroupExampleInput">¿En su espacio laboral ha presenciado  exclusión a personas en condición de discapacidad?</label>
+        </div>
+          <div class="col-xs-6 col-sm-5">
+            <select name="tipo_organizacion" id="tipo_organizacion" class="form-control" data-readonly="otra_organizacion" data-readonly-value="1">
+                <option value="">Seleccione</option>
                 <option value="1">Si</option>
                 <option value="2">No</option>
             </select>
-        </div>
-        <div class="col-md-12">
-            <br>
-        </div>
-        <div class="col-md-6"><label  for="formGroupExampleInput">Indicar si el evento se encuentra financiado (Recursos propios, patrocinadores, aliados, otros)
-        </label>
-        </div>
-        <div class="col-md-6">
-            <label  for="formGroupExampleInput2">¿En qué pocentaje se encuentra financiado?  %
+        <br></div>
+
+        <div class="col-md-6" align="center">
+            <label  for="formGroupExampleInput2">¿En qué lugar? (opcional)
+            
             </label>
             <label class="freebirdFormviewerViewItemsPagebreakDescriptionText" style="font-size:11px"></label>
         </div>
         
-        <div class="col-md-6"><input required type="text" class="form-control" id="porcentaje" name="porcentaje"></div>
-        <div class="col-md-6">
-            <select name="financiado" id="financiado" class="form-control" data-readonly="porcentaje" data-readonly-value="1" >
-                <option value="1">Si</option>
-                <option value="2">No</option>
-            </select>
+         <div class="col-xs-6 col-sm-5"><input required type="text" class="form-control" id="otra_organizacion" name="otra_organizacion" readonly="readonly"><br></div>
+
+
+<!-- 4 parte-->
+
+<div class="col-md-6" align="center">
+            <label for="formGroupExampleInput">Nombre</label>
         </div>
+          <div class="col-xs-6 col-sm-5"><input required type="text" class="form-control" id="otra_organizacion" name="otra_organizacion" readonly="readonly">
+        <br></div>
+
+        <div class="col-md-6" align="center">
+            <label  for="formGroupExampleInput2">Área</label>
+            <label class="freebirdFormviewerViewItemsPagebreakDescriptionText" style="font-size:11px"></label>
+        </div>
+        
+         <div class="col-xs-6 col-sm-5"><input required type="text" class="form-control" id="otra_organizacion" name="otra_organizacion" readonly="readonly"></div>
     </div>
-    <br>
-     <center><h3>Información adicional para tener en  cuenta</h3></center>
-     <p><font size="3"><strong><center>Es responsabilidad de cada proponente tener muy claros todos los descuentos por impuestos que aplican para incluirlos en el valor del final de la propuesta.</center></strong></font></p>
     
     </fieldset>
     <div class="freebirdFormviewerViewFormContent ">
