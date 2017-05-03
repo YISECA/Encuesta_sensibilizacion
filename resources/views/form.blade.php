@@ -55,7 +55,15 @@
             <label class="freebirdFormviewerViewItemsPagebreakDescriptionText" style="font-size:11px"></label>
         </div>
         
-         <div class="col-xs-6 col-sm-5"><input required type="text" class="form-control" id="tipo_grupo" name="tipo_grupo" readonly="readonly"><br></div>
+         <div class="col-xs-6 col-sm-5"> <select name="tipo_grupo" id="tipo_grupo" class="form-control" readonly="readonly">
+                <option value="">Seleccione</option>
+                <option value="discapacidad física">discapacidad física</option>
+                <option value="discapacidad mental">discapacidad mental</option>
+                <option value="discapacidad visual">discapacidad visual</option>
+                <option value="discapacidad auditiva">discapacidad auditiva</option>
+                <option value="discapacidad multiple">discapacidad multiple</option>
+                <option value="discapacidad congnitiva">discapacidad congnitiva</option>
+            </select><br></div>
 
 <!-- 3 parte-->
 

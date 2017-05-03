@@ -86,18 +86,20 @@ class FormController extends BaseController
     }
 
     public function listar_datos(){
-
+$acceso = Form::whereYear('created_at', '=', date('Y'))->get(); 
     
     $tabla='<table id="lista">
         <thead>
            <tr>
              <th style="text-transform: capitalize;">id</th>
-             <th style="text-transform: capitalize;">cédula</th>
-             <th style="text-transform: capitalize;">nombres</th>          
-             <th style="text-transform: capitalize;">área</th>
-             <th style="text-transform: capitalize;">cargo</th>
-             <th style="text-transform: capitalize;">fecha</th>
-             <th style="text-transform: capitalize;">hora</th>
+             <th style="text-transform: capitalize;">Tiene familiares con algún tipo de discapacidad</th>
+             <th style="text-transform: capitalize;">Qué tipo de discapacidad</th>          
+             <th style="text-transform: capitalize;">Su familiar hace parte de algún grupo social, deportivo o de formación académica</th>
+             <th style="text-transform: capitalize;"> Por favor indique a que grupo pertenece </th>
+             <th style="text-transform: capitalize;">En su espacio laboral ha presenciado exclusión a personas en condición de discapacidad</th>
+             <th style="text-transform: capitalize;">En qué lugar</th>
+             <th style="text-transform: capitalize;">Nombre</th>
+             <th style="text-transform: capitalize;">Área</th>
             </tr>
         </thead>
         <tbody id="tabla">';
@@ -105,12 +107,14 @@ class FormController extends BaseController
      
 
        $tabla.='<tr><td>'.$value->id.'</td>';
-       $tabla.='<td>'.$value->cedula.'</td>';    
-       $tabla.='<td>'.$value->primer_nombre.'</td>';
-       $tabla.='<td>'.$value->area.'</td>';
-       $tabla.='<td>'.$value->cargo.'</td>';
-       $tabla.='<td>'.$value->horas->fecha['fecha'].'</td>';
-       $tabla.='<td>'.$value->horas['hora'].'</td></tr>';
+       $tabla.='<td>'.$value->discapacidad.'</td>';    
+       $tabla.='<td>'.$value->tipo_discapacidad.'</td>';
+       $tabla.='<td>'.$value->grupo.'</td>';
+       $tabla.='<td>'.$value->tipo_grupo.'</td>';
+       $tabla.='<td>'.$value->lugar.'</td>';
+       $tabla.='<td>'.$value->tipo_lugar.'</td>';
+       $tabla.='<td>'.$value->nombre.'</td>';
+       $tabla.='<td>'.$value->area.'</td></tr>';
        
 
       }

@@ -9,9 +9,9 @@ jQuery(document).ready(function($) {
 
 		if(readonly_value != $(this).val())
 		{
-			$('input[name="'+input+'"]').attr('readonly', 'readonly');
+			$('*[name="'+input+'"]').attr('readonly', 'readonly');
 		} else {
-			$('input[name="'+input+'"]').removeAttr('readonly');	
+			$('*[name="'+input+'"]').removeAttr('readonly');	
 		}
 	});
 
