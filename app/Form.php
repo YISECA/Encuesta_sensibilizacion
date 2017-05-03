@@ -8,7 +8,7 @@ class Form extends Model
 {
     //
 
-   protected $table = 'festival_de_verano_2017';
+   protected $table = 'encuesta_socializacion_1';
 
 
 }

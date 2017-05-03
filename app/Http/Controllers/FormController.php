@@ -219,27 +219,14 @@ class FormController extends BaseController
 
     private function store($formulario, $input)
     {
-        $formulario['tipo_organizacion'] = $input['tipo_organizacion'];
-        $formulario['otra_organizacion'] = $input['otra_organizacion'];
-        $formulario['nombre_organizacion'] = $input['nombre_organizacion'];
-        $formulario['nombre_propuesta'] = $input['nombre_propuesta'];
-        $formulario['propuesta'] = $input['propuesta'];
-        $formulario['publico_dirigido'] = $input['publico_dirigido'];
-        $formulario['antecedentes'] = $input['antecedentes'];
-        $formulario['fecha_propuesta'] = $input['fecha_propuesta'];
-        $formulario['tipo_evento'] = $input['tipo_evento'];
-        $formulario['evento'] = $input['evento'];
-        $formulario['tiempo_montaje'] = $input['tiempo_montaje'];
-        $formulario['duracion'] = $input['duracion'];
-        $formulario['tiempo_desmontaje'] = $input['tiempo_desmontaje'];
-        $formulario['lugar_propuesto'] = $input['lugar_propuesto'];
-        $formulario['numero_participantes'] = $input['numero_participantes'];
-        $formulario['numero_espectadores'] = $input['numero_espectadores'];
-        $formulario['total'] = $input['total'];
-        $formulario['patrocinador'] = $input['patrocinador'];
-        $formulario['nombre_patrocinador'] = $input['nombre_patrocinador'];
-        $formulario['financiado'] = $input['financiado'];
-        $formulario['porcentaje'] = $input['porcentaje'];
+        $formulario['discapacidad'] = $input['discapacidad'];
+        $formulario['tipo_discapacidad'] = $input['tipo_discapacidad'];
+        $formulario['grupo'] = $input['grupo'];
+        $formulario['tipo_grupo'] = $input['tipo_grupo'];
+        $formulario['lugar'] = $input['lugar'];
+        $formulario['tipo_lugar'] = $input['tipo_lugar'];
+        $formulario['nombre'] = $input['nombre'];
+        $formulario['area'] = $input['area'];
         $formulario->save();
 
         return $formulario;
